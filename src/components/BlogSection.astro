@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+import SectionHeader from './SectionHeader.astro';
+import Section from './Section.astro';
+import HorizontalSeparator from './HorizontalSeparator.astro';
+import BlogCard from './BlogCard.astro';
+
+const posts = await getCollection('blog');
+posts.sort((a, b) => {
+  const dateA = new Date(a.data.date);
+  const dateB = new Date(b.data.date);
+  return dateB.getTime() - dateA.getTime();
+});
+
+const suggestedEntries = posts.slice(0, 3);
+
+const heading = 'Blog';
+const cta = {text: 'View blog', href:"/blog"};
+---
+
+<Section>
+  <SectionHeader heading={heading} cta={cta}/>
+  {suggestedEntries.map(post => (
+    <BlogCard post={post}/>
+    <HorizontalSeparator/>
+  ))}
+</Section>
