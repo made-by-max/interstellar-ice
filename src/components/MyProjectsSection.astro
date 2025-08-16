@@ -1,22 +1,26 @@
 ---
 import Section from "./Section.astro";
-import SectionHeader from "./SectionHeader.astro"
+import SectionHeader from "./SectionHeader.astro";
 import { getCollection } from "astro:content";
 
-const projects = await getCollection('project');
+const projects = await getCollection("project");
 
 const heading = "My Projects";
-const cta = { text: 'View All', href: '/projects' };
-  ---
+const featuredProjects = projects.slice(0, 3);
+const cta = { text: "View All", href: "/projects" };
+---
+
 <Section dark={true}>
-  <SectionHeader cta={cta} heading={heading}/>
+  <SectionHeader cta={cta} heading={heading} />
 
   <div class="projects-container">
     {
-      projects.map(project => (
+      featuredProjects.map((project) => (
         <div class="card">
-          <img src={project.data.image} alt={project.data.title}/>
-          <h3><a href={project.data.liveSiteURL}>{project.data.title}</a></h3>
+          <img src={project.data.image} alt={project.data.title} />
+          <h3>
+            <a href={project.data.liveSiteURL}>{project.data.title}</a>
+          </h3>
         </div>
       ))
     }
@@ -24,12 +28,11 @@ const cta = { text: 'View All', href: '/projects' };
 </Section>
 
 <style>
-
   .projects-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 24px;
-    
+
     .card {
       overflow: hidden;
       transition: transform 0.3s;
@@ -38,23 +41,20 @@ const cta = { text: 'View All', href: '/projects' };
     }
 
     h3 {
-      margin-top: 20px;;
+      margin-top: 20px;
     }
-      
-      a {
-        text-decoration: none;
-        color: var(--dark);
-        font-weight:  600;
-        font-size: 18px;
+
+    a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    @media (max-width: 700px) {
+      & {
+        grid-template-columns: 1fr;
       }
-      
-      @media (max-width: 700px) {
-        & {
-          grid-template-columns: 1fr;
-        }
-        
-      
     }
   }
-
 </style>
