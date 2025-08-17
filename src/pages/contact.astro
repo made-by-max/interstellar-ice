@@ -2,14 +2,21 @@
 import Section from "../components/Section.astro";
 import Layout from "../layouts/Layout.astro";
 
-const title = "Contact";
-const email = "me@jamesqquick.com";
+const title = "About me";
+const email = "madebymax.dev@gmail.com";
 ---
 
 <Layout title="Contact">
   <Section>
     <h1>{title}</h1>
-    <p>You can contact me at <a href={`mailto:${email}`}>{email}.</a></p>
-	  <img src="/images/me.png"/>
+    <p>
+      I'm a product designer with more than 10 years of experience in medical
+      technology and developer tools, working on making the leap into a more
+      engineering-based role.
+    </p>
+    <p>
+      You can get in touch with me at <a href={`mailto:${email}`}>{email}.</a>
+    </p>
+    <img src="/images/profilepic.jpg" class="profile" />
   </Section>
 </Layout>

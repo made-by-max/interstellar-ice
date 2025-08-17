@@ -6,7 +6,7 @@ import Container from "./Container.astro";
   <Container>
     <div class="nav-container">
       <div>
-        <a href="/"><img src="/images/ASTRA.svg" alt="Astra logo"/></a>
+        <a href="/" class="max-logo">Max Taylor</a>
       </div>
       <ul class="nav-items">
         <li><a href="/projects">Projects</a></li>
@@ -21,8 +21,14 @@ import Container from "./Container.astro";
   nav {
     background: var(--secondary);
 
-    img {
-      height: 20px;
+    .max-logo {
+      font-size: 1.375rem;
+      font-weight: 900;
+      background: -webkit-linear-gradient(-45deg, #3245ff, #b845ed);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
+      letter-spacing: -6%;
     }
 
     .nav-container {
@@ -39,7 +45,7 @@ import Container from "./Container.astro";
         a {
           text-decoration: none;
           color: var(--dark);
-          font-size: 18px;
+          font-size: 1.125rem;
         }
       }
 
@@ -48,7 +54,6 @@ import Container from "./Container.astro";
           flex-direction: column;
           gap: 16px;
         }
-        
       }
     }
   }

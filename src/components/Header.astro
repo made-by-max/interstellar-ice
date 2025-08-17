@@ -2,30 +2,36 @@
 import ButtonLink from "./ButtonLink.astro";
 import Section from "./Section.astro";
 ---
-<Section>  
+
+<Section>
   <header id="header">
     <div class="content">
       <h1>
-      <span>Hi, I am Astra.</span>
-        <span><span class="accent">Full-stack</span> Specialist!</span>
+        <span>Hey, I'm Max,</span>
+        <span>designer and <span class="accent">creative coder!</span></span>
       </h1>
       <p class="description">
-        I’m a Full-Stack Developer specializing in React.js, Next.js, Node.js,
-        and database management. I build scalable, high-performance web
-        applications, robust back-end architecture, and efficient API
-        integrations.
+        I'm a product designer with over 10 years of experience specializing in
+        systems design and information architecture. I'm looking to break into
+        design engineering so I'm learning React and brushing up on my CSS and
+        Javascript. I'll probably add in some Node.js and Next.js while I'm at
+        it.
       </p>
-      <div class="button-container">
-         <ButtonLink href="/projects" text="View projects" variant='secondary' />
-         <ButtonLink href="/resume.pdf" text="Download resume" isDownload={true}/>
-      </div>
+      <!-- <div class="button-container">
+        <ButtonLink href="/projects" text="View projects" variant="secondary" />
+        <ButtonLink
+          href="/resume.pdf"
+          text="Download resume"
+          isDownload={true}
+        />
+      </div> -->
     </div>
-    <img src="/images/me.png" />
+    <img src="/images/profilepic.jpg" class="profile" />
   </header>
 </Section>
 
 <style>
-   #header {
+  #header {
     display: grid;
     grid-template-columns: 540px 1fr;
     justify-items: center;
@@ -72,6 +78,4 @@ import Section from "./Section.astro";
       }
     }
   }
-
- 
 </style>
