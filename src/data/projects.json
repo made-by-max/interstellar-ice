@@ -1,42 +1,19 @@
 [
   {
-    "title": "E-commerce Dashbord",
+    "title": "100 Days of Code",
     "slug": "project-1",
-    "description": "A fast, scalable admin panel for managing products, orders, and sales analytics. Built with React, Next.js, Firebase, and TailwindCSS.",
+    "description": "A selection of projects I worked on as part of my 100 days of code challenge.",
     "image": "/images/projects/project-1.png",
-    "githubURL": "https://github.com/jamesqquick",
-    "liveSiteURL": "https://jamesqquick.com"
+    "githubURL": "https://github.com/made-by-max/100daysofcode",
+    "liveSiteURL": "https://radcode.netlify.app/"
   },
   {
-    "title": "SaaS Landing Page",
+    "title": "Twimba",
     "slug": "project-2",
-    "description": "A redesign of ABC’s landing page, improving UI/UX, conversion rates, and performance. Built with Next.js, TailwindCSS, and Framer Motion.",
+    "description": "A Twitter clone I created for Scrimba's Frontend Developer Career Track",
     "image": "/images/projects/project-2.png",
-    "githubURL": "https://github.com/jamesqquick",
-    "liveSiteURL": "https://jamesqquick.com"
-  },
-  {
-    "title": "DevTools Chrome Extension",
-    "slug": "project-3",
-    "description": "A Chrome DevTools extension for monitoring API requests in real-time. It provides live request logging and response analysis for developers.",
-    "image": "/images/projects/project-3.png",
-    "githubURL": "https://github.com/jamesqquick",
-    "liveSiteURL": "https://jamesqquick.com"
-  }, 
-  {
-    "title": "DevTools fsdfsadChrome Extension",
-    "slug": "project-4",
-    "description": "A Chrome DevTools extension for monitoring API requests in real-time. It provides live request logging and response analysis for developers.",
-    "image": "/images/projects/project-3.png",
-    "githubURL": "https://github.com/jamesqquick",
-    "liveSiteURL": "https://jamesqquick.com"
-  }, 
-  {
-    "title": "DevTools Chrome Extension",
-    "slug": "project-5",
-    "description": "A Chrome DevTools extension for monitoring API requests in real-time. It provides live request logging and response analysis for developers.",
-    "image": "/images/projects/project-3.png",
-    "githubURL": "https://github.com/jamesqquick",
-    "liveSiteURL": "https://jamesqquick.com"
+    "githubURL": "https://github.com/made-by-max/twimba",
+    "liveSiteURL": "https://joyful-meerkat-63cc2a.netlify.app/"
   }
+  
 ]
