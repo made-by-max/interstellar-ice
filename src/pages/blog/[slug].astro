@@ -18,9 +18,10 @@ interface Props {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+const pageTitle = post.data.title;
 ---
 
-<Layout>
+<Layout pageTitle={pageTitle}>
   <Section>
     <div class="post">
       <img src={post.data.image} alt={post.data.title} class="post-image" />

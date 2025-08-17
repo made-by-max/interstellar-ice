@@ -13,9 +13,10 @@ posts.sort((a, b) => {
 });
 
 const heading = 'Blog';
+const pageTitle = "Blog"
 ---
 
-<Layout>
+<Layout pageTitle={pageTitle}>
   <Section>
     <h1>{heading}</h1>
     {posts.map(post => (

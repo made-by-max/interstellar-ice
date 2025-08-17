@@ -3,10 +3,11 @@ import Section from "../components/Section.astro";
 import Layout from "../layouts/Layout.astro";
 
 const title = "About me";
+const pageTitle = title;
 const email = "madebymax.dev@gmail.com";
 ---
 
-<Layout title="Contact">
+<Layout pageTitle={pageTitle}>
   <Section>
     <h1>{title}</h1>
     <p>
