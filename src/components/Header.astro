@@ -7,7 +7,7 @@ import Section from "./Section.astro";
   <header id="header">
     <div class="content">
       <h1>
-        <span>Hey, I'm Max,</span>
+        <span>Hey! I'm Max,</span>
         <span>designer and <span class="accent">creative coder!</span></span>
       </h1>
       <p class="description">
@@ -26,7 +26,7 @@ import Section from "./Section.astro";
         />
       </div> -->
     </div>
-    <img src="/images/profilepic.jpg" class="profile" />
+    <img src="public/images/profilepicnobg.png" class="profile" />
   </header>
 </Section>
 
@@ -45,7 +45,9 @@ import Section from "./Section.astro";
       margin-bottom: 20px;
 
       .accent {
-        color: var(--primary);
+        background: -webkit-linear-gradient(-27deg, #635dff, #908bff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
     }
 
@@ -56,7 +58,7 @@ import Section from "./Section.astro";
 
     .description {
       line-height: 28px;
-      color: var(--dark);
+      color: var(--white);
       margin-bottom: 30px;
     }
 

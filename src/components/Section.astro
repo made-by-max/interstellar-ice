@@ -5,13 +5,12 @@ interface Props {
   dark?: boolean;
 }
 
-const {dark = false} = Astro.props;
+const { dark = false } = Astro.props;
 ---
 
-
-<section class={dark ? 'dark': ''}>
+<section class={dark ? "dark" : ""}>
   <Container>
-    <slot/>
+    <slot />
   </Container>
 </section>
 
@@ -20,14 +19,13 @@ const {dark = false} = Astro.props;
     padding: 80px 0;
 
     &.dark {
-      background: var(--secondary);
+      background: var(--light);
     }
 
-     @media (max-width: 1000px) {
+    @media (max-width: 1000px) {
       & {
         padding: 40px 0;
       }
     }
   }
-
 </style>
