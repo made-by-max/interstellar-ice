@@ -1,0 +1,40 @@
+---
+import { getCollection, render } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import BlogCard from "../../components/BlogCard.astro";
+import type { CollectionEntry } from "astro:content";
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection("blog"); // Replace "blog" with your collection name
+  const uniqueTags = [
+    ...new Set(allPosts.map((post) => post.data.tags).flat()),
+  ];
+
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts.filter((post) =>
+      post.data.tags.includes(tag)
+    );
+    return {
+      params: { tag },
+      props: { posts: filteredPosts },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<Layout pageTitle={`Posts tagged with "${tag}"`}>
+  <h1>Posts tagged with "{tag}"</h1>
+  <ul>
+    {
+      posts.map((post) => (
+        <li>
+          <BlogCard post={post} />
+          {/* {<h1 class="post-title">{post.data.title}</h1>} */}
+        </li>
+      ))
+    }
+  </ul>
+</Layout>
